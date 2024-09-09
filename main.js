@@ -1,20 +1,29 @@
+
 function updateClock() {
   const now = new Date();
-  let hours = now.getHours();
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const seconds = String(now.getSeconds()).padStart(2, '0');
+
+  // Get the UTC time and convert it to IST (UTC + 5:30)
+  const utcOffset = now.getTimezoneOffset() * 60000; // Offset in milliseconds
+  const istTime = new Date(now.getTime() + utcOffset + (5.5 * 60 * 60 * 1000)); // Add 5:30 hours
+
+  let hours = istTime.getHours();
+  const minutes = String(istTime.getMinutes()).padStart(2, '0');
+  const seconds = String(istTime.getSeconds()).padStart(2, '0');
   const ampm = hours >= 12 ? 'PM' : 'AM';
 
+  // Convert hours to 12-hour format
   hours = hours % 12;
-  hours = hours ? hours : 12;
-  hours = String(hours).padStart(2, '0');
+  hours = hours ? hours : 12; // the hour '0' should be '12'
 
   const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
   
   document.getElementsByClassName('clock')[0].textContent = timeString;
 }
 
+// Update the clock every second to reflect real-time changes
 setInterval(updateClock, 1000);
+
+// Initialize the clock
 updateClock();
 
 // time section ends
@@ -67,4 +76,13 @@ function openNav() {
 });
 
 
+// year change
+function updateYear() {
+  const now = new Date();
+  const year = now.getFullYear(); // Get the current year
+  
+  document.getElementsByClassName('year')[0].textContent = year;
+}
 
+// Update the year on page load
+updateYear();

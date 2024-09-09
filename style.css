@@ -7,7 +7,7 @@
    
 }
 body{
-  background: #191818;
+  /* background: #191818; */
   color:#f1f1f1;
   scroll-behavior: smooth;
 }
@@ -615,10 +615,15 @@ width:80%;
   text-align: justify;
   padding:5%;
 }
-.clock {
+.clock{
   font-family:Montserrat;
   font-size: 24px;
   color: #f4f4f4;
+}
+.year{
+  font-family:Montserrat;
+  font-size: 24px;
+  /* color: #f4f4f4; */
 }
 .time{
   display: flex;
@@ -857,7 +862,7 @@ width:90%;
   font-size: 15px;
 }
 .time{
-  width:42%;
+  width:50%;
 }
 .location , .clock{
   font-size:14px;
