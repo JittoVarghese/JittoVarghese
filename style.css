@@ -623,13 +623,19 @@ width:80%;
 .year{
   font-family:Montserrat;
   font-size: 24px;
-  /* color: #f4f4f4; */
+  color: #f4f4f4;
 }
 .time{
   display: flex;
   align-items: center;
   justify-content: space-between;
   width:19%;
+}
+.current-year{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width:10%;
 }
 .location{
   font-family:Montserrat;
@@ -864,7 +870,10 @@ width:90%;
 .time{
   width:50%;
 }
-.location , .clock{
+.current-year{
+  width:17%;
+}
+.location , .clock ,.year{
   font-size:14px;
 }
 .backToTop{

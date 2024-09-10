@@ -1,3 +1,16 @@
+// year change
+function updateYear() {
+  const currentTime = new Date(Date.now());  // Initialize with Date.now()
+  const year = currentTime.getFullYear();    // Get the current year
+  
+  document.getElementsByClassName('year')[0].textContent = year;  // Update the text content of the element with class 'year'
+}
+
+// Update the year on page load
+updateYear();
+
+// year change ends
+
 
 function updateClock() {
   const now = new Date();
@@ -76,13 +89,3 @@ function openNav() {
 });
 
 
-// year change
-function updateYear() {
-  const now = new Date();
-  const year = now.getFullYear(); // Get the current year
-  
-  document.getElementsByClassName('year')[0].textContent = year;
-}
-
-// Update the year on page load
-updateYear();
