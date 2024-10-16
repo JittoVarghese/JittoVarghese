@@ -506,6 +506,13 @@ height:100%;
   align-items: center;
   flex-wrap: wrap;
 }
+.calloption{
+  font-family:Montserrat;
+  font-size:20px;
+  font-weight:400;
+  margin-left:15px;
+  margin-top:5px;
+}
 .sub{
   width:40%;
   padding:5px;
